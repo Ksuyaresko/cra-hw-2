@@ -1,21 +1,25 @@
 import React from "react";
 import './footer.css'
-export default function Footer() {
-    const link = (href, title) => (
-        <a href={href}>{title}</a>
-    )
+
+export default function Footer(props) {
+
     return (
         <footer className='footer'>
             <div className='footer__item'>
-                {link('#', 'Реклама')}
-                {link('#', 'Для бизнеса')}
-                {link('#', 'Всё о Google')}
-                {link('#', 'Как работает Google Поиск')}
+                {props.links
+                    .map( (el, index ) => (
+                        <a href={el.href} key={index}>{el.title}</a>
+                    ))
+                    .filter( (el, index) => index <=3 )
+                }
             </div>
             <div className='footer__item'>
-                {link('#', 'Конфиденциальность')}
-                {link('#', 'Условия')}
-                {link('#', 'Настройки')}
+                {props.links
+                    .map( (el, index ) => (
+                        <a href={el.href} key={index}>{el.title}</a>
+                    ))
+                    .filter( (el, index) => index >3 )
+                }
             </div>
         </footer>
     )

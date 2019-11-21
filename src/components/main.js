@@ -16,7 +16,8 @@ export default function Main() {
                 <input
                     className='search__input'
                     value={value}
-                    onInput={handleInput}/>
+                    onChange={handleInput}
+                />
             </div>
             <div className='search__btns'>
                 <button className='search__btn'>Поиск в гугл</button>

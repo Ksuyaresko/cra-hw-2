@@ -21,6 +21,7 @@
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+package-lock.json
 .idea/.gitignore
 .idea/hw-2.iml
 .idea/inspectionProfiles/
